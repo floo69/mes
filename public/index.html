@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Scanner Attendance System</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>QR Code Attendance System</h1>
+      <p>Raspberry Pi QR Scanner Project</p>
+    </header>
+
+    <main>
+      <section class="dashboard">
+        <div class="stats-container">
+          <div class="stat-card">
+            <h3>Total Scans</h3>
+            <p id="total-scans">Loading...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Unique Students</h3>
+            <p id="unique-students">Loading...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Today's Scans</h3>
+            <p id="today-scans">Loading...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="data-section">
+        <div class="filter-controls">
+          <h2>Attendance Records</h2>
+          <div class="search-container">
+            <input
+              type="text"
+              id="student-search"
+              placeholder="Search by student ID..."
+            />
+            <button id="search-btn">Search</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="attendance-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Student ID</th>
+                <th>QR Data</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="attendance-data">
+              <tr>
+                <td colspan="4">Loading data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 QR Scanner Attendance System</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
